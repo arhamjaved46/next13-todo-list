@@ -20,11 +20,11 @@ export default async function SinglePost() {
       console.log("Error loading topics: ", error);
     }
   };
-  const {data} = await getTopics();
+  const {response} = await getTopics();
 
   return (
     <>
-      {data.map((t) => (
+      {response.map((t) => (
         <div
           key={t._id}
           className="flex items-start justify-between gap-5 p-4 my-3 border border-slate-300"

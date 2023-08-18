@@ -23,9 +23,9 @@ export async function POST(request) {
 export async function GET() {
 
     await connection();
-    const data = await Topic.find();
+    const response = await Topic.find();
 
-    return NextResponse.json({ data });
+    return NextResponse.json({ response });
 }
 
 export async function DELETE(req) {
